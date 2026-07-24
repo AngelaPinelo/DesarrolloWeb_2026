@@ -7,7 +7,7 @@
 
 ## Enlace del sitio publicado (Netlify)
 
-> Pendiente de agregar tras el despliegue en Netlify.
+>  https://tarea1angelapinelo.netlify.app/
 
 ## Descripción del proyecto
 
@@ -46,8 +46,3 @@ Todas las páginas comparten el mismo menú de navegación (`<nav>`) y un pie de
 
 Este trabajo se encuentra versionado en GitHub y fue subido a la rama `Tarea1`, tal
 como lo solicita el enunciado de la tarea.
-
-## Publicación
-
-El sitio fue publicado utilizando [Netlify](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/),
-siguiendo la guía oficial de despliegue paso a paso.
