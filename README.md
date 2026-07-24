@@ -12,7 +12,7 @@ Este trabajo es de carácter **individual**.
 
 ## Enlace del sitio publicado (Netlify)
 
-> Pendiente de agregar tras el despliegue en Netlify.
+[https://hoja1angelapinelo.netlify.app/](https://hoja1angelapinelo.netlify.app/)
 
 ## Estudiante
 
