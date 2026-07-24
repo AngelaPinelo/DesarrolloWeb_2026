@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda en Línea (Prototipo) - Productos</title>
+</head>
+<body>
+
+    <header>
+        <h1>Tienda en Línea (Prototipo)</h1>
+        <p>Catálogo de Productos</p>
+    </header>
+
+    <nav>
+        <h2>Menú de navegación</h2>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="producto-detalle.html">Detalle de Producto</a></li>
+            <li><a href="carrito.html">Carrito de Compras</a></li>
+            <li><a href="registro.html">Registro / Iniciar Sesión</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main>
+        <section>
+            <h2>Catálogo Completo</h2>
+
+            <form action="#" method="get">
+                <label for="categoria">Filtrar por categoría:</label>
+                <select id="categoria" name="categoria">
+                    <option value="todas">Todas</option>
+                    <option value="electronica">Electrónica</option>
+                    <option value="accesorios">Accesorios</option>
+                    <option value="hogar">Hogar</option>
+                    <option value="ropa">Ropa</option>
+                </select>
+
+                <label for="orden">Ordenar por:</label>
+                <select id="orden" name="orden">
+                    <option value="relevancia">Relevancia</option>
+                    <option value="precio_asc">Precio: menor a mayor</option>
+                    <option value="precio_desc">Precio: mayor a menor</option>
+                </select>
+
+                <input type="submit" value="Filtrar">
+            </form>
+
+            <br>
+
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Producto</th>
+                        <th>Descripción</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="https://picsum.photos/id/1080/100/80" alt="Laptop Ultra 15" width="100" height="80"></td>
+                        <td>Laptop Ultra 15</td>
+                        <td>15 pulgadas, 16GB RAM, 512GB SSD</td>
+                        <td>Electrónica</td>
+                        <td>Q7,999.00</td>
+                        <td><a href="producto-detalle.html">Ver detalle</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://picsum.photos/id/103/100/80" alt="Audífonos inalámbricos" width="100" height="80"></td>
+                        <td>Audífonos Inalámbricos</td>
+                        <td>Cancelación de ruido, batería 30h</td>
+                        <td>Electrónica</td>
+                        <td>Q499.00</td>
+                        <td><a href="producto-detalle.html">Ver detalle</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://picsum.photos/id/21/100/80" alt="Mochila urbana" width="100" height="80"></td>
+                        <td>Mochila Urbana</td>
+                        <td>Impermeable, compartimento para laptop</td>
+                        <td>Accesorios</td>
+                        <td>Q259.00</td>
+                        <td><a href="producto-detalle.html">Ver detalle</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://picsum.photos/id/96/100/80" alt="Cafetera eléctrica" width="100" height="80"></td>
+                        <td>Cafetera Eléctrica</td>
+                        <td>Capacidad de 12 tazas, programable</td>
+                        <td>Hogar</td>
+                        <td>Q349.00</td>
+                        <td><a href="producto-detalle.html">Ver detalle</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://picsum.photos/id/26/100/80" alt="Camisa casual" width="100" height="80"></td>
+                        <td>Camisa Casual</td>
+                        <td>100% algodón, varias tallas</td>
+                        <td>Ropa</td>
+                        <td>Q149.00</td>
+                        <td><a href="producto-detalle.html">Ver detalle</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://picsum.photos/id/160/100/80" alt="Reloj deportivo" width="100" height="80"></td>
+                        <td>Reloj Deportivo</td>
+                        <td>Resistente al agua, monitor de ritmo cardíaco</td>
+                        <td>Accesorios</td>
+                        <td>Q699.00</td>
+                        <td><a href="producto-detalle.html">Ver detalle</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>Página codificada por: Angela Gabriela Pinelo Flores &mdash; Carnet: 9490-24-1578</p>
+    </footer>
+
+</body>
+</html>

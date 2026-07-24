@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda en Línea (Prototipo) - Detalle de Producto</title>
+</head>
+<body>
+
+    <header>
+        <h1>Tienda en Línea (Prototipo)</h1>
+        <p>Detalle de Producto</p>
+    </header>
+
+    <nav>
+        <h2>Menú de navegación</h2>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="producto-detalle.html">Detalle de Producto</a></li>
+            <li><a href="carrito.html">Carrito de Compras</a></li>
+            <li><a href="registro.html">Registro / Iniciar Sesión</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main>
+        <article>
+            <h2>Laptop Ultra 15</h2>
+
+            <img src="https://picsum.photos/id/1080/400/300" alt="Laptop Ultra 15" width="400" height="300">
+
+            <p>
+                La Laptop Ultra 15 combina un diseño ligero con un rendimiento excepcional,
+                ideal para trabajo, estudio y entretenimiento.
+            </p>
+
+            <h3>Especificaciones</h3>
+            <dl>
+                <dt>Marca</dt>
+                <dd>TechStore</dd>
+                <dt>Modelo</dt>
+                <dd>Ultra 15 - 2026</dd>
+                <dt>Procesador</dt>
+                <dd>Intel Core i7 de 13va generación</dd>
+                <dt>Memoria RAM</dt>
+                <dd>16 GB</dd>
+                <dt>Almacenamiento</dt>
+                <dd>512 GB SSD</dd>
+                <dt>Color</dt>
+                <dd>Gris espacial</dd>
+                <dt>Garantía</dt>
+                <dd>12 meses</dd>
+            </dl>
+
+            <h3>Precio</h3>
+            <p>Q7,999.00</p>
+
+            <h3>Agregar al carrito</h3>
+            <form action="#" method="post">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" max="10" value="1">
+                <br><br>
+
+                <label for="color">Color:</label>
+                <select id="color" name="color">
+                    <option value="gris">Gris espacial</option>
+                    <option value="plata">Plata</option>
+                    <option value="negro">Negro</option>
+                </select>
+                <br><br>
+
+                <fieldset>
+                    <legend>Garantía extendida</legend>
+                    <input type="radio" id="garantia_no" name="garantia" value="no" checked>
+                    <label for="garantia_no">No, gracias</label>
+                    <br>
+                    <input type="radio" id="garantia_si" name="garantia" value="si">
+                    <label for="garantia_si">Sí, agregar 12 meses adicionales (Q499.00)</label>
+                </fieldset>
+                <br>
+
+                <input type="submit" value="Agregar al carrito">
+                <input type="reset" value="Cancelar">
+            </form>
+        </article>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>Página codificada por: Angela Gabriela Pinelo Flores &mdash; Carnet: 9490-24-1578</p>
+    </footer>
+
+</body>
+</html>
