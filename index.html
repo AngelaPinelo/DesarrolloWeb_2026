@@ -2,83 +2,141 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Tienda en Línea (Prototipo) - Inicio</title>
+    <title>Excursión a Tikal y Flores, Petén</title>
 </head>
 <body>
 
     <header>
-        <h1>Tienda en Línea (Prototipo)</h1>
-        <p>Todo lo que necesitas, a un clic de distancia.</p>
+        <h1>Excursión a Tikal y Flores, Petén</h1>
+        <p>Descubre el corazón de la selva maya guatemalteca</p>
     </header>
 
-    <nav>
-        <h2>Menú de navegación</h2>
+    <nav id="indice">
+        <h2>Índice</h2>
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="producto-detalle.html">Detalle de Producto</a></li>
-            <li><a href="carrito.html">Carrito de Compras</a></li>
-            <li><a href="registro.html">Registro / Iniciar Sesión</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="#descripcion">Descripción del lugar</a></li>
+            <li><a href="#galeria">Galería de imágenes</a></li>
+            <li><a href="#itinerario">Itinerario de la excursión</a></li>
+            <li><a href="#actividades">Actividades disponibles</a></li>
         </ul>
     </nav>
 
     <hr>
 
     <main>
-        <section>
-            <h2>Bienvenido a nuestra tienda</h2>
+        <section id="descripcion">
+            <h2>Descripción del lugar</h2>
             <p>
-                Esta es una tienda en línea de prototipo, creada exclusivamente con HTML nativo
-                como parte de la tarea del curso de Desarrollo Web. Ninguno de los formularios
-                presentes en este sitio procesa información real; su único propósito es mostrar
-                la estructura del documento (DOM) que se utilizará en fases futuras del curso.
+                Tikal es uno de los sitios arqueológicos más importantes de la civilización maya,
+                ubicado en el departamento de Petén, al norte de Guatemala, dentro del Parque
+                Nacional Tikal, declarado Patrimonio Mundial Mixto (cultural y natural) por la
+                UNESCO. Sus imponentes templos y pirámides se alzan sobre la selva tropical,
+                rodeados de una biodiversidad excepcional que incluye monos araña, tucanes y
+                jaguares.
+            </p>
+            <p>
+                A poca distancia se encuentra Flores, una pintoresca isla ubicada en el Lago
+                Petén Itzá, conocida por sus calles empedradas, casas coloridas y ambiente
+                tranquilo. Flores es el punto de partida habitual para las excursiones hacia
+                Tikal y otros sitios arqueológicos de la región.
+            </p>
+            <p>
+                <strong>Ubicación:</strong> Departamento de Petén, Guatemala.<br>
+                <strong>Principales atractivos:</strong> Templos mayas, biodiversidad de la
+                selva petenera, el Lago Petén Itzá y el casco histórico de la isla de Flores.
             </p>
         </section>
 
-        <section>
-            <h2>Productos Destacados</h2>
+        <section id="galeria">
+            <h2>Galería de imágenes</h2>
+
+            <img src="img/tikal-templo-gran-jaguar.jpeg" alt="Templo del Gran Jaguar en Tikal" width="350" height="260">
+            <img src="img/tikal-vista-selva.jpg" alt="Vista aérea de los templos de Tikal sobre la selva" width="350" height="260">
+            <img src="img/flores-isla-peten.jpg" alt="Isla de Flores en el Lago Petén Itzá" width="350" height="260">
+            <img src="img/lago-peten-itza.jpg" alt="Atardecer en el Lago Petén Itzá" width="350" height="260">
+        </section>
+
+        <section id="itinerario">
+            <h2>Itinerario de la excursión</h2>
             <table border="1" cellpadding="8" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>Imagen</th>
-                        <th>Producto</th>
-                        <th>Categoría</th>
-                        <th>Precio</th>
+                        <th>Fecha</th>
+                        <th>Horario</th>
+                        <th>Actividad</th>
+                        <th>Lugar</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img src="https://picsum.photos/id/1080/120/90" alt="Laptop Ultra 15" width="120" height="90"></td>
-                        <td>Laptop Ultra 15</td>
-                        <td>Electrónica</td>
-                        <td>Q7,999.00</td>
+                        <td>Día 1 - 15/08/2026</td>
+                        <td>06:00 am</td>
+                        <td>Salida desde la Ciudad de Guatemala</td>
+                        <td>Terminal de buses, Ciudad de Guatemala</td>
                     </tr>
                     <tr>
-                        <td><img src="https://picsum.photos/id/103/120/90" alt="Audífonos inalámbricos" width="120" height="90"></td>
-                        <td>Audífonos Inalámbricos</td>
-                        <td>Electrónica</td>
-                        <td>Q499.00</td>
+                        <td>Día 1 - 15/08/2026</td>
+                        <td>02:00 pm</td>
+                        <td>Llegada y registro en el hotel</td>
+                        <td>Isla de Flores, Petén</td>
                     </tr>
                     <tr>
-                        <td><img src="https://picsum.photos/id/21/120/90" alt="Mochila urbana" width="120" height="90"></td>
-                        <td>Mochila Urbana</td>
-                        <td>Accesorios</td>
-                        <td>Q259.00</td>
+                        <td>Día 1 - 15/08/2026</td>
+                        <td>04:00 pm</td>
+                        <td>Recorrido a pie por el casco histórico</td>
+                        <td>Isla de Flores</td>
+                    </tr>
+                    <tr>
+                        <td>Día 2 - 16/08/2026</td>
+                        <td>04:30 am</td>
+                        <td>Traslado hacia el parque nacional</td>
+                        <td>Flores &rarr; Tikal</td>
+                    </tr>
+                    <tr>
+                        <td>Día 2 - 16/08/2026</td>
+                        <td>06:00 am</td>
+                        <td>Tour guiado por los templos mayas al amanecer</td>
+                        <td>Parque Nacional Tikal</td>
+                    </tr>
+                    <tr>
+                        <td>Día 2 - 16/08/2026</td>
+                        <td>12:00 pm</td>
+                        <td>Almuerzo típico</td>
+                        <td>Restaurante del parque, Tikal</td>
+                    </tr>
+                    <tr>
+                        <td>Día 2 - 16/08/2026</td>
+                        <td>03:00 pm</td>
+                        <td>Regreso a Flores y tarde libre</td>
+                        <td>Isla de Flores</td>
+                    </tr>
+                    <tr>
+                        <td>Día 3 - 17/08/2026</td>
+                        <td>08:00 am</td>
+                        <td>Paseo en lancha por el Lago Petén Itzá</td>
+                        <td>Lago Petén Itzá</td>
+                    </tr>
+                    <tr>
+                        <td>Día 3 - 17/08/2026</td>
+                        <td>11:00 am</td>
+                        <td>Salida de regreso a la Ciudad de Guatemala</td>
+                        <td>Isla de Flores &rarr; Ciudad de Guatemala</td>
                     </tr>
                 </tbody>
             </table>
-            <p><a href="productos.html">Ver catálogo completo &raquo;</a></p>
         </section>
 
-        <section>
-            <h2>¿Por qué comprar con nosotros?</h2>
+        <section id="actividades">
+            <h2>Actividades disponibles</h2>
+            <p>Además de las actividades incluidas en el itinerario, los visitantes pueden disfrutar de:</p>
             <ul>
-                <li>Envíos a todo el país</li>
-                <li>Garantía en todos los productos</li>
-                <li>Atención al cliente personalizada</li>
-                <li>Pagos seguros</li>
+                <li>Observación de aves y fauna silvestre en la selva petenera</li>
+                <li>Recorrido nocturno guiado en Tikal (sujeto a disponibilidad)</li>
+                <li>Kayak en el Lago Petén Itzá</li>
+                <li>Visita a la Reserva Natural Petencito</li>
+                <li>Compra de artesanías locales en la isla de Flores</li>
+                <li>Degustación de gastronomía típica petenera</li>
+                <li>Ascenso al Templo IV para ver el atardecer sobre la selva</li>
             </ul>
         </section>
     </main>
@@ -86,7 +144,7 @@
     <hr>
 
     <footer>
-        <p>Página codificada por: Angela Gabriela Pinelo Flores &mdash; Carnet: 9490-24-1578</p>
+        <p>Página desarrollada por: Angela Gabriela Pinelo Flores &mdash; Carnet: 9490-24-1578</p>
     </footer>
 
 </body>
