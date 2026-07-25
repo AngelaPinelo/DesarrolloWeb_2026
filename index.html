@@ -2,7 +2,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Excursión guiada de 3 días a Tikal y la Isla de Flores, Petén: descripción del lugar, galería, itinerario y actividades.">
     <title>Excursión a Tikal y Flores, Petén</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
@@ -11,7 +14,7 @@
         <p>Descubre el corazón de la selva maya guatemalteca</p>
     </header>
 
-    <nav id="indice">
+    <nav id="indice" aria-label="Índice de contenidos">
         <h2>Índice</h2>
         <ul>
             <li><a href="#descripcion">Descripción del lugar</a></li>
@@ -20,8 +23,6 @@
             <li><a href="#actividades">Actividades disponibles</a></li>
         </ul>
     </nav>
-
-    <hr>
 
     <main>
         <section id="descripcion">
@@ -50,77 +51,92 @@
         <section id="galeria">
             <h2>Galería de imágenes</h2>
 
-            <img src="img/tikal-templo-gran-jaguar.jpeg" alt="Templo del Gran Jaguar en Tikal" width="350" height="260">
-            <img src="img/tikal-vista-selva.jpg" alt="Vista aérea de los templos de Tikal sobre la selva" width="350" height="260">
-            <img src="img/flores-isla-peten.jpg" alt="Isla de Flores en el Lago Petén Itzá" width="350" height="260">
-            <img src="img/lago-peten-itza.jpg" alt="Atardecer en el Lago Petén Itzá" width="350" height="260">
+            <div class="galeria-grid">
+                <figure>
+                    <img src="img/tikal-templo-gran-jaguar.jpeg" alt="Templo del Gran Jaguar en Tikal" width="350" height="260" loading="lazy">
+                    <figcaption>Templo del Gran Jaguar</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/tikal-vista-selva.jpg" alt="Vista aérea de los templos de Tikal sobre la selva" width="350" height="260" loading="lazy">
+                    <figcaption>Templos de Tikal sobre la selva</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/flores-isla-peten.jpg" alt="Isla de Flores en el Lago Petén Itzá" width="350" height="260" loading="lazy">
+                    <figcaption>Isla de Flores</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/lago-peten-itza.jpg" alt="Atardecer en el Lago Petén Itzá" width="350" height="260" loading="lazy">
+                    <figcaption>Atardecer en el Lago Petén Itzá</figcaption>
+                </figure>
+            </div>
         </section>
 
         <section id="itinerario">
             <h2>Itinerario de la excursión</h2>
-            <table border="1" cellpadding="8" cellspacing="0">
+            <table>
+                <caption>Detalle día a día de la excursión (3 días / 2 noches)</caption>
                 <thead>
                     <tr>
-                        <th>Fecha</th>
-                        <th>Horario</th>
-                        <th>Actividad</th>
-                        <th>Lugar</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Horario</th>
+                        <th scope="col">Actividad</th>
+                        <th scope="col">Lugar</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Día 1 - 15/08/2026</td>
-                        <td>06:00 am</td>
-                        <td>Salida desde la Ciudad de Guatemala</td>
-                        <td>Terminal de buses, Ciudad de Guatemala</td>
+                        <td data-etiqueta="Fecha">Día 1 - 15/08/2026</td>
+                        <td data-etiqueta="Horario">06:00 am</td>
+                        <td data-etiqueta="Actividad">Salida desde la Ciudad de Guatemala</td>
+                        <td data-etiqueta="Lugar">Terminal de buses, Ciudad de Guatemala</td>
                     </tr>
                     <tr>
-                        <td>Día 1 - 15/08/2026</td>
-                        <td>02:00 pm</td>
-                        <td>Llegada y registro en el hotel</td>
-                        <td>Isla de Flores, Petén</td>
+                        <td data-etiqueta="Fecha">Día 1 - 15/08/2026</td>
+                        <td data-etiqueta="Horario">02:00 pm</td>
+                        <td data-etiqueta="Actividad">Llegada y registro en el hotel</td>
+                        <td data-etiqueta="Lugar">Isla de Flores, Petén</td>
                     </tr>
                     <tr>
-                        <td>Día 1 - 15/08/2026</td>
-                        <td>04:00 pm</td>
-                        <td>Recorrido a pie por el casco histórico</td>
-                        <td>Isla de Flores</td>
+                        <td data-etiqueta="Fecha">Día 1 - 15/08/2026</td>
+                        <td data-etiqueta="Horario">04:00 pm</td>
+                        <td data-etiqueta="Actividad">Recorrido a pie por el casco histórico</td>
+                        <td data-etiqueta="Lugar">Isla de Flores</td>
                     </tr>
                     <tr>
-                        <td>Día 2 - 16/08/2026</td>
-                        <td>04:30 am</td>
-                        <td>Traslado hacia el parque nacional</td>
-                        <td>Flores &rarr; Tikal</td>
+                        <td data-etiqueta="Fecha">Día 2 - 16/08/2026</td>
+                        <td data-etiqueta="Horario">04:30 am</td>
+                        <td data-etiqueta="Actividad">Traslado hacia el parque nacional</td>
+                        <td data-etiqueta="Lugar">Flores &rarr; Tikal</td>
                     </tr>
                     <tr>
-                        <td>Día 2 - 16/08/2026</td>
-                        <td>06:00 am</td>
-                        <td>Tour guiado por los templos mayas al amanecer</td>
-                        <td>Parque Nacional Tikal</td>
+                        <td data-etiqueta="Fecha">Día 2 - 16/08/2026</td>
+                        <td data-etiqueta="Horario">06:00 am</td>
+                        <td data-etiqueta="Actividad">Tour guiado por los templos mayas al amanecer</td>
+                        <td data-etiqueta="Lugar">Parque Nacional Tikal</td>
                     </tr>
                     <tr>
-                        <td>Día 2 - 16/08/2026</td>
-                        <td>12:00 pm</td>
-                        <td>Almuerzo típico</td>
-                        <td>Restaurante del parque, Tikal</td>
+                        <td data-etiqueta="Fecha">Día 2 - 16/08/2026</td>
+                        <td data-etiqueta="Horario">12:00 pm</td>
+                        <td data-etiqueta="Actividad">Almuerzo típico</td>
+                        <td data-etiqueta="Lugar">Restaurante del parque, Tikal</td>
                     </tr>
                     <tr>
-                        <td>Día 2 - 16/08/2026</td>
-                        <td>03:00 pm</td>
-                        <td>Regreso a Flores y tarde libre</td>
-                        <td>Isla de Flores</td>
+                        <td data-etiqueta="Fecha">Día 2 - 16/08/2026</td>
+                        <td data-etiqueta="Horario">03:00 pm</td>
+                        <td data-etiqueta="Actividad">Regreso a Flores y tarde libre</td>
+                        <td data-etiqueta="Lugar">Isla de Flores</td>
                     </tr>
                     <tr>
-                        <td>Día 3 - 17/08/2026</td>
-                        <td>08:00 am</td>
-                        <td>Paseo en lancha por el Lago Petén Itzá</td>
-                        <td>Lago Petén Itzá</td>
+                        <td data-etiqueta="Fecha">Día 3 - 17/08/2026</td>
+                        <td data-etiqueta="Horario">08:00 am</td>
+                        <td data-etiqueta="Actividad">Paseo en lancha por el Lago Petén Itzá</td>
+                        <td data-etiqueta="Lugar">Lago Petén Itzá</td>
                     </tr>
                     <tr>
-                        <td>Día 3 - 17/08/2026</td>
-                        <td>11:00 am</td>
-                        <td>Salida de regreso a la Ciudad de Guatemala</td>
-                        <td>Isla de Flores &rarr; Ciudad de Guatemala</td>
+                        <td data-etiqueta="Fecha">Día 3 - 17/08/2026</td>
+                        <td data-etiqueta="Horario">11:00 am</td>
+                        <td data-etiqueta="Actividad">Salida de regreso a la Ciudad de Guatemala</td>
+                        <td data-etiqueta="Lugar">Isla de Flores &rarr; Ciudad de Guatemala</td>
                     </tr>
                 </tbody>
             </table>
@@ -141,10 +157,9 @@
         </section>
     </main>
 
-    <hr>
-
     <footer>
         <p>Página desarrollada por: Angela Gabriela Pinelo Flores &mdash; Carnet: 9490-24-1578</p>
+        <p><a href="#indice">Volver al índice &uarr;</a></p>
     </footer>
 
 </body>

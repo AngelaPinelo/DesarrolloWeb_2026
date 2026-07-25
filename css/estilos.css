@@ -1,0 +1,230 @@
+/* Hoja de Trabajo 2 - Estilos para Excursión a Tikal y Flores, Petén */
+
+:root {
+    --verde-selva: #1f5c4a;
+    --verde-oscuro: #143d31;
+    --dorado: #c99a3c;
+    --arena: #f7f3ea;
+    --texto: #2b2b28;
+    --blanco: #ffffff;
+    --sombra: rgba(0, 0, 0, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--texto);
+    background-color: var(--arena);
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(135deg, var(--verde-selva), var(--verde-oscuro));
+    color: var(--blanco);
+    text-align: center;
+    padding: 2.5rem 1rem;
+}
+
+header h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 0;
+    color: var(--dorado);
+    font-style: italic;
+}
+
+/* Índice de navegación */
+nav#indice {
+    background-color: var(--blanco);
+    border-bottom: 3px solid var(--dorado);
+    padding: 1rem 1.5rem;
+}
+
+nav#indice h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+    color: var(--verde-selva);
+}
+
+nav#indice ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+}
+
+nav#indice a {
+    color: var(--verde-selva);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+nav#indice a:hover,
+nav#indice a:focus {
+    color: var(--dorado);
+    border-color: var(--dorado);
+}
+
+/* Contenido principal */
+main {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    background-color: var(--blanco);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px var(--sombra);
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    color: var(--verde-selva);
+    border-bottom: 2px solid var(--arena);
+    padding-bottom: 0.5rem;
+}
+
+/* Galería */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+}
+
+.galeria-grid figure {
+    margin: 0;
+    text-align: center;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px var(--sombra);
+}
+
+.galeria-grid figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--verde-oscuro);
+}
+
+/* Tabla de itinerario */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    text-align: left;
+    font-style: italic;
+    margin-bottom: 0.75rem;
+    color: var(--verde-oscuro);
+}
+
+th, td {
+    padding: 0.7rem 0.6rem;
+    border: 1px solid #ddd6c4;
+    text-align: left;
+}
+
+th {
+    background-color: var(--verde-selva);
+    color: var(--blanco);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--arena);
+}
+
+tbody tr:hover {
+    background-color: #eee3c5;
+}
+
+/* Lista de actividades */
+#actividades ul {
+    padding-left: 1.25rem;
+}
+
+#actividades li {
+    margin-bottom: 0.4rem;
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+footer a {
+    color: var(--dorado);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav#indice ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    section {
+        padding: 1rem 1.25rem;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #ddd6c4;
+        position: relative;
+        padding-left: 45%;
+    }
+
+    td::before {
+        content: attr(data-etiqueta);
+        position: absolute;
+        left: 0.6rem;
+        width: 40%;
+        font-weight: 600;
+        color: var(--verde-selva);
+    }
+
+    tbody tr {
+        margin-bottom: 0.75rem;
+        border: 1px solid #ddd6c4;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+}
