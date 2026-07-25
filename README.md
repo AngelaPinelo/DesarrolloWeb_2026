@@ -30,7 +30,7 @@ Sobre la base de la Hoja de Trabajo 1 (solo HTML), se agregó una hoja de estilo
 
 ## Enlace del sitio publicado (Netlify)
 
-_Pendiente: reemplazar con el enlace generado al publicar la rama `HojaTrabajo2` en Netlify._
+https://hoja2angelapinelo.netlify.app/
 
 ## Estudiante
 
@@ -51,13 +51,3 @@ _Pendiente: reemplazar con el enlace generado al publicar la rama `HojaTrabajo2`
 2. Abrir el archivo `index.html` con cualquier navegador web (no requiere servidor).
 3. Usar el índice al inicio de la página para navegar entre secciones.
 
-## Repositorio y rama
-
-Este trabajo se encuentra versionado en GitHub y fue subido a la rama `HojaTrabajo2`,
-creada a partir de la rama `HojaTrabajo1`, tal como lo solicita el enunciado de la
-hoja de trabajo.
-
-## Publicación
-
-El sitio fue publicado utilizando [Netlify](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/),
-siguiendo la guía oficial de despliegue paso a paso.
