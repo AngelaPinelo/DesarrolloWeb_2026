@@ -21,6 +21,9 @@
             <li><a href="#galeria">Galería de imágenes</a></li>
             <li><a href="#itinerario">Itinerario de la excursión</a></li>
             <li><a href="#actividades">Actividades disponibles</a></li>
+            <li><a href="#cotizador">Cotizar excursión</a></li>
+            <li><a href="#contacto">Reservar / Contacto</a></li>
+            <li><a href="#testimonios">Opiniones</a></li>
         </ul>
     </nav>
 
@@ -51,21 +54,22 @@
         <section id="galeria">
             <h2>Galería de imágenes</h2>
 
+            <p class="pista">Haz clic sobre una imagen para verla en grande.</p>
             <div class="galeria-grid">
                 <figure>
-                    <img src="img/tikal-templo-gran-jaguar.jpeg" alt="Templo del Gran Jaguar en Tikal" width="350" height="260" loading="lazy">
+                    <img class="img-galeria" src="img/tikal-templo-gran-jaguar.jpeg" alt="Templo del Gran Jaguar en Tikal" width="350" height="260" loading="lazy">
                     <figcaption>Templo del Gran Jaguar</figcaption>
                 </figure>
                 <figure>
-                    <img src="img/tikal-vista-selva.jpg" alt="Vista aérea de los templos de Tikal sobre la selva" width="350" height="260" loading="lazy">
+                    <img class="img-galeria" src="img/tikal-vista-selva.jpg" alt="Vista aérea de los templos de Tikal sobre la selva" width="350" height="260" loading="lazy">
                     <figcaption>Templos de Tikal sobre la selva</figcaption>
                 </figure>
                 <figure>
-                    <img src="img/flores-isla-peten.jpg" alt="Isla de Flores en el Lago Petén Itzá" width="350" height="260" loading="lazy">
+                    <img class="img-galeria" src="img/flores-isla-peten.jpg" alt="Isla de Flores en el Lago Petén Itzá" width="350" height="260" loading="lazy">
                     <figcaption>Isla de Flores</figcaption>
                 </figure>
                 <figure>
-                    <img src="img/lago-peten-itza.jpg" alt="Atardecer en el Lago Petén Itzá" width="350" height="260" loading="lazy">
+                    <img class="img-galeria" src="img/lago-peten-itza.jpg" alt="Atardecer en el Lago Petén Itzá" width="350" height="260" loading="lazy">
                     <figcaption>Atardecer en el Lago Petén Itzá</figcaption>
                 </figure>
             </div>
@@ -145,7 +149,11 @@
         <section id="actividades">
             <h2>Actividades disponibles</h2>
             <p>Además de las actividades incluidas en el itinerario, los visitantes pueden disfrutar de:</p>
-            <ul>
+
+            <label for="buscar-actividad">Buscar actividad:</label>
+            <input type="text" id="buscar-actividad" placeholder="Ej: lago, kayak, artesanías...">
+
+            <ul id="lista-actividades">
                 <li>Observación de aves y fauna silvestre en la selva petenera</li>
                 <li>Recorrido nocturno guiado en Tikal (sujeto a disponibilidad)</li>
                 <li>Kayak en el Lago Petén Itzá</li>
@@ -154,13 +162,83 @@
                 <li>Degustación de gastronomía típica petenera</li>
                 <li>Ascenso al Templo IV para ver el atardecer sobre la selva</li>
             </ul>
+            <p id="sin-resultados" class="oculto">No se encontraron actividades con ese término.</p>
+        </section>
+
+        <section id="cotizador">
+            <h2>Cotizar excursión</h2>
+            <p>Completa los datos para calcular un estimado del costo de tu viaje.</p>
+            <form id="form-cotizacion">
+                <div class="campo">
+                    <label for="asistentes">Número de asistentes:</label>
+                    <input type="number" id="asistentes" name="asistentes" min="1" value="1" required>
+                </div>
+
+                <div class="campo">
+                    <label for="paquete">Tipo de paquete:</label>
+                    <select id="paquete" name="paquete">
+                        <option value="450">Básico (Q450 por persona)</option>
+                        <option value="650">Estándar (Q650 por persona)</option>
+                        <option value="900">Premium (Q900 por persona)</option>
+                    </select>
+                </div>
+
+                <fieldset class="campo">
+                    <legend>Servicios adicionales:</legend>
+                    <label><input type="checkbox" name="extra" value="75"> Transporte incluido (+Q75 por persona)</label>
+                    <label><input type="checkbox" name="extra" value="120"> Alimentación (+Q120 por persona)</label>
+                    <label><input type="checkbox" name="extra" value="50"> Equipo de aventura (+Q50 por persona)</label>
+                </fieldset>
+
+                <button type="button" id="btn-calcular">Calcular Total</button>
+                <p id="resultado-cotizacion" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section id="contacto">
+            <h2>Reservar / Contacto</h2>
+            <p>Déjanos tus datos y te contactaremos para confirmar tu reservación.</p>
+            <form id="form-contacto">
+                <div class="campo">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+
+                <div class="campo">
+                    <label for="personas">Número de personas:</label>
+                    <input type="number" id="personas" name="personas" min="1" required>
+                </div>
+
+                <button type="submit" id="btn-enviar">Enviar solicitud</button>
+                <p id="mensaje-confirmacion" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section id="testimonios">
+            <h2>Opiniones de nuestros visitantes</h2>
+            <div id="lista-testimonios" class="testimonios-grid"></div>
+            <button type="button" id="btn-otras-opiniones">Ver otras opiniones</button>
         </section>
     </main>
+
+    <div id="modal-imagen" class="modal oculto">
+        <div class="modal-contenido">
+            <button type="button" id="cerrar-modal" aria-label="Cerrar">&times;</button>
+            <img id="modal-img" src="" alt="">
+            <p id="modal-titulo"></p>
+        </div>
+    </div>
 
     <footer>
         <p>Página desarrollada por: Angela Gabriela Pinelo Flores &mdash; Carnet: 9490-24-1578</p>
         <p><a href="#indice">Volver al índice &uarr;</a></p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

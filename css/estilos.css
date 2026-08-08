@@ -170,6 +170,153 @@ tbody tr:hover {
     margin-bottom: 0.4rem;
 }
 
+/* Utilidades */
+.oculto {
+    display: none;
+}
+
+.pista {
+    font-size: 0.9rem;
+    color: #6b6b63;
+    margin-top: -0.5rem;
+}
+
+.img-galeria {
+    cursor: pointer;
+}
+
+/* Formularios (cotizador y contacto) */
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+fieldset.campo {
+    border: 1px solid #ddd6c4;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+}
+
+fieldset.campo label {
+    display: block;
+    font-weight: normal;
+    margin-bottom: 0.3rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.5rem;
+    border: 1px solid #ddd6c4;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.campo-invalido {
+    border-color: #c0392b;
+    background-color: #fdecea;
+}
+
+button {
+    background-color: var(--verde-selva);
+    color: var(--blanco);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--verde-oscuro);
+}
+
+#resultado-cotizacion,
+#mensaje-confirmacion {
+    margin-top: 0.75rem;
+    font-weight: 600;
+    color: var(--verde-oscuro);
+}
+
+/* Testimonios */
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.testimonio {
+    background-color: var(--arena);
+    border-left: 4px solid var(--dorado);
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.testimonio .autor {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: var(--verde-oscuro);
+}
+
+/* Modal de imagen */
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 100;
+}
+
+.modal.oculto {
+    display: none;
+}
+
+.modal-contenido {
+    background-color: var(--blanco);
+    border-radius: 8px;
+    padding: 1rem;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.modal-contenido img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.modal-contenido p {
+    margin: 0.75rem 0 0;
+    color: var(--verde-oscuro);
+    font-weight: 600;
+}
+
+#cerrar-modal {
+    position: absolute;
+    top: -0.75rem;
+    right: -0.75rem;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    line-height: 1;
+    border-radius: 50%;
+}
+
 /* Pie de página */
 footer {
     background-color: var(--verde-oscuro);
