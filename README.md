@@ -1,4 +1,4 @@
-# Tienda en Línea (Prototipo) — DesarrolloWeb_2026
+# Tienda en Línea (React + Bootstrap) — DesarrolloWeb_2026
 
 ## Datos del estudiante
 
@@ -11,43 +11,63 @@
 
 ## Descripción del proyecto
 
-Prototipo de una Tienda en Línea desarrollado **exclusivamente con HTML nativo**, como
-parte de la Tarea 1 del curso de Desarrollo Web. No se utilizó ningún tipo de hoja de
-estilos (CSS), framework de diseño (Bootstrap, etc.) ni código JavaScript.
-
-Los formularios incluidos en el sitio (registro, inicio de sesión, contacto, carrito,
-agregar al carrito) son únicamente de carácter estructural: no procesan ni envían
-información real. Su propósito es preparar el DOM para fases futuras del curso.
+Tarea 2 del curso de Desarrollo Web: transformación de la Tienda en Línea (Tarea 1,
+hecha en HTML nativo) en una aplicación web interactiva construida con **React**,
+**React Router** y **React-Bootstrap**, conservando la misma arquitectura de
+información (inicio, catálogo, detalle de producto, carrito, registro/login,
+contacto y nosotros) pero ahora componetizada, modular y responsiva.
 
 ## Estructura del sitio
 
-El sitio cuenta con 7 páginas HTML:
+El sitio cuenta con 7 páginas/rutas, todas dentro de una sola aplicación de React:
 
-| Página | Descripción |
-|---|---|
-| `index.html` | Página de inicio con bienvenida y productos destacados |
-| `productos.html` | Catálogo completo de productos con formulario de filtros |
-| `producto-detalle.html` | Detalle de un producto con formulario para agregar al carrito |
-| `carrito.html` | Carrito de compras con formularios de actualización y datos de envío |
-| `registro.html` | Formularios de registro de usuario e inicio de sesión |
-| `contacto.html` | Formulario de contacto e información de la tienda |
-| `nosotros.html` | Información institucional del prototipo y del equipo de desarrollo |
+| Ruta | Página | Descripción |
+|---|---|---|
+| `/` | Inicio | Bienvenida, `Carousel` de promociones y `Card` de productos destacados |
+| `/productos` | Productos | Catálogo completo con filtro por categoría/orden y `Card` |
+| `/productos/:id` | Detalle de producto | Especificaciones (`Table`), `Accordion` y `Modal` al agregar al carrito |
+| `/carrito` | Carrito | Tabla interactiva de productos, cantidades y formulario de envío/pago |
+| `/registro` | Registro / Iniciar sesión | Formularios de registro e inicio de sesión en `Tabs` |
+| `/contacto` | Contacto | Formulario de contacto e información de la tienda |
+| `/nosotros` | Nosotros | Misión, visión, valores (`Accordion`) y tabla del equipo |
 
-Todas las páginas comparten el mismo menú de navegación (`<nav>`) y un pie de página
-(`<footer>`) con el nombre completo y carnet del estudiante que codificó el sitio.
+La barra de navegación (`Navbar`) y el pie de página (`Footer`) son componentes
+reutilizables (`src/components`) presentes en todas las páginas. El `Footer`
+incluye el nombre completo, carnet y los módulos aportados por cada integrante.
 
-## Cómo visualizar el sitio localmente
+## Estructura del código
 
-1. Clonar este repositorio.
-2. Abrir el archivo `index.html` con cualquier navegador web (no requiere servidor).
-3. Navegar entre las páginas usando el menú superior.
+```
+src/
+  components/   Navbar y Footer (globales, reutilizables)
+  pages/        Inicio, Productos, ProductoDetalle, Carrito, Registro, Contacto, Nosotros
+  data/         Datos de los productos del catálogo
+  App.jsx       Definición de rutas (React Router)
+  main.jsx      Punto de entrada
+```
+
+## Cómo ejecutar el proyecto localmente
+
+```bash
+npm install
+npm run dev
+```
+
+Luego abrir la URL que indica la terminal (por defecto `http://localhost:5173`).
+
+Para generar la versión de producción:
+
+```bash
+npm run build
+```
 
 ## Repositorio y rama
 
-Este trabajo se encuentra versionado en GitHub y fue subido a la rama `Tarea1`, tal
-como lo solicita el enunciado de la tarea.
+Este trabajo se encuentra versionado en GitHub y fue subido a la rama `Tarea2`,
+tal como lo solicita el enunciado de la tarea.
 
 ## Publicación
 
-El sitio fue publicado utilizando [Netlify](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/),
-siguiendo la guía oficial de despliegue paso a paso.
+El sitio fue publicado utilizando [Netlify](https://www.netlify.com/), con
+comando de build `npm run build` y carpeta de publicación `dist` (ver
+`netlify.toml`).
