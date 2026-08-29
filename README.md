@@ -5,9 +5,9 @@
 - **Nombre completo:** Angela Gabriela Pinelo Flores
 - **Carnet:** 9490-24-1578
 
-## Enlace del sitio publicado (Netlify)
+## Enlace del sitio publicado en Netlify
 
-> Pendiente de agregar tras el despliegue en Netlify.
+> https://tarea2angelapinelo.netlify.app
 
 ## Descripción del proyecto
 
